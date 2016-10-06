@@ -1,0 +1,64 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+/* 登录界面 */
+.avatar-image {
+    width: 128px;
+    height: 128px;
+}
+
+.login-form {
+    margin: 30rpx;
+}
+
+.avatar {
+    text-align: center;
+}
+
+.auth {
+    border-bottom: 1px solid #c7c7c7;
+}
+
+.center {
+    display: block;
+    margin: 10px auto;
+    font-size: 30rpx;
+}
+
+switch {
+    float: right;
+}
+
+.switch-warp {
+    height: 40px;
+    position: relative;
+}
+
+.switch-label {
+    position: absolute;
+    top: 13%;
+}
+
+.login-btn {
+    color:#FFFFFF;
+    background-color:#1AAD19;
+}

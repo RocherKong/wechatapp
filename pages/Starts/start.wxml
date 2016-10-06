@@ -1,0 +1,43 @@
+<loading hidden='{{!loading}}'>
+加载中...
+</loading>
+<view class="section">
+  <input placeholder="型号,品牌,分类" auto-focus bindinput='bindKeyInput'/>
+  <view class="btn-area">
+    <button bindtap="bindButtonSearch">搜索</button>
+  </view>
+</view>
+ <!--start 的项目-->
+    <scroll-view class='section started-repos' style="height: 100%;" scroll-y="true" bindscroll="scroll" bindscrolltoupper="upper" 
+    bindscrolltolower="lower" scroll-top="{{scrollTop}}">
+        <block wx:for="{{items}}">
+            <view class='pro-item flex'>
+                <view class='flex-warp-top flex-flex'>
+                    <image style="width: 100px; height: 100px; background-color: #eeeeee;" class='flex-warp-left repo-image' src='{{item.CoverImage}}' mode='aspectFit' />
+                    <text class='flex-warp-right repo-name'>{{item.ProductModel}}</text>
+                </view>
+                <view class='flex-warp-mid'>
+                    {{item.Category.CategoryName}}
+                </view>
+                <view class='flex-warp-bottom repo-starts-count flex-flex'>
+                    {{item.Brand.BrandName}}
+                    <text class='point'>•</text>
+                    <image class='start-image icon-start flex-warp-left' src='../images/startsHL.png' />
+                    <text class='flex-warp-right'>1</text>
+                </view>
+            </view>
+        </block>
+        <view class="load-more-wrap">
+            <block wx:if="{{hasMore}}">
+            <view class="load-content">
+                <text class="weui-loading"/><text class="loading-text">玩命加载中</text>
+            </view>
+            </block>
+
+            <block wx:else>
+            <view class="load-content">
+                <text>没有更多内容了</text>
+            </view>
+      </block>
+    </view>
+    </scroll-view>
